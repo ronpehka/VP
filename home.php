@@ -8,6 +8,16 @@
 	if($hournow >= 8 and $hournow <=18){
 		$partofday = "õppimise aeg";
 	}
+	
+	//Vaatame semestri kulgemist
+	$semesterstart = new DateTime("2020-8-31");
+	$semesterend = new DateTime("2020-12-13");
+	$semesterduration = $semesterstart->diff($semesterend);
+	$semesterdurationdays = $smesterduartion ->format("%r%a");
+	$today = New DateTime("now");
+	
+	
+	
 ?>
 <!DOCTYPE html>
 <html lang="et">
