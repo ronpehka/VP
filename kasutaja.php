@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-require("../../../config.php");
+require("../config.php");
 require("fnc_general.php");
 require("salvestus.php");
 $firstname = "";

@@ -4,7 +4,7 @@ require("../../../config.php");
 require("salvestus.php");
 require("usesession.php");
 require("fnc_general.php");
-$userdescription = readuserdescription();
+$userdescription = readdescription();
 $notice = "";
 if(isset($_POST["profilesubmit"])){
 	$userdescription = test_input($_POST["descriptioninput"]);

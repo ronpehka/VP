@@ -1,8 +1,8 @@
 <?php
-	//var_dump($_POST);
-	require("../../../config.php");
+	require("../config.php");
 	require("salvestus.php");
 	require("fnc_general.php");
+	session_start();
 	//kui on idee sisestatud ja nuppu vajutatud
 	//salvestame selle andmebaasi
 
@@ -114,7 +114,7 @@ require("header.php");
 <body>
   <img src="../b2nner/vp_banner.png" alt ="Veebiprogrammerimise kursuse 
   bänner">
-  <h1>Veebirprogrammerimine</h1>
+  <h1>Veebiprogrammerimine</h1>
   <p>See veebileht on loodud õppetöö kaigus ning ei sisalda mingit tõsiseltvõetavat sisu!</p>
   <p>See leht on tehtud veebiprogrammeerimise kursusel aastal 2020
   <a href="http://www.tlu.ee">Tallinna Ülikooli<a/> Digitehnoloogiate instituudis.</p>
@@ -136,8 +136,7 @@ require("header.php");
 		echo '<img src ="../vp_pics/tlu_terra_3.jpg">';
 } ?>
   <hr>
-  <h3>Logi sisse</h3>
-  <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <label for="emailinput">E-mail (kasutajatunnus):</label><br>
 	  <input type="email" name="emailinput" id="emailinput" value="<?php echo $email; ?>"><span><?php echo $emailerror; ?></span>
 	  <br>
